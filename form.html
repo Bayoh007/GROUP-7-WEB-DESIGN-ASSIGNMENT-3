@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaloneBazar | Farmer & Vendor Registration</title>
+    <link rel="stylesheet" href="CSS/form.css">
+    <script src="JAVASCRIPT/form.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container nav-container">
+        <div class="logo">Salone<span>Bazar</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="market.html">Marketplace</a></li>
+            <li><a href="" style="color: #E67E22;">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Join SaloneBazar Marketplace</h2>
+            <p>Connect with buyers across Sierra Leone • Get fair prices • Grow your farm business</p>
+        </div>
+        
+        <div class="form-body">
+            <!-- Success Message (Hidden by default) -->
+            <div id="successMessage" style="display: none;" class="success-message"></div>
+
+            <!-- Info Box -->
+            <div class="info-box">
+                <strong>Why Register?</strong> Get access to real-time market prices, direct buyer connections, 
+                and agricultural training. Registration is FREE for all Sierra Leone farmers and vendors.
+            </div>
+
+            <!-- Registration Form -->
+            <form id="registrationForm">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" placeholder="e.g., Fatmata Sesay" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label>Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" placeholder="+232 76 123456 or 076123456" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="fatmata@example.com">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <!-- District -->
+                <div class="form-group">
+                    <label>District <span class="required">*</span></label>
+                    <select id="district" required>
+                        <option value="">Select your district</option>
+                        <option value="Western Area Urban">Western Area Urban (Freetown)</option>
+                        <option value="Western Area Rural">Western Area Rural</option>
+                        <option value="Bo">Bo District</option>
+                        <option value="Kenema">Kenema District</option>
+                        <option value="Makeni">Makeni (Bombali)</option>
+                        <option value="Kono">Kono District</option>
+                        <option value="Kailahun">Kailahun District</option>
+                        <option value="Port Loko">Port Loko District</option>
+                        <option value="Pujehun">Pujehun District</option>
+                    </select>
+                    <span class="error-message" id="districtError"></span>
+                </div>
+
+                <!-- Role Selection -->
+                <div class="form-group">
+                    <label>I am a: <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="role" value="Farmer" id="farmer" checked>
+                            <label for="farmer">Farmer</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="role" value="Vendor/Trader" id="vendor">
+                            <label for="vendor">Vendor/Trader</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="role" value="Cooperative" id="cooperative">
+                            <label for="cooperative">Cooperative</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="form-group">
+                    <label>Products You Sell <span class="required">*</span></label>
+                    <select id="products" multiple size="4" style="height: auto;">
+                        <option value="Rice">Rice</option>
+                        <option value="Cassava">Cassava</option>
+                        <option value="Palm Oil">Palm Oil</option>
+                        <option value="Groundnuts">Groundnuts</option>
+                        <option value="Onions">Onions</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Other"> Other</option>
+                    </select>
+                    <small style="color: var(--gray);">Hold Ctrl (Windows) or Cmd (Mac) to select multiple</small>
+                </div>
+
+                <!-- Farm Size -->
+                <div class="form-group">
+                    <label>Farm Size (acres) / Business Scale</label>
+                    <input type="number" id="farmSize" placeholder="e.g., 5 acres" step="0.5">
+                </div>
+
+                <!-- Additional Info -->
+                <div class="form-group">
+                    <label>Additional Information</label>
+                    <textarea id="additionalInfo" rows="3" placeholder="Tell us about your farming needs, challenges, or any support required..."></textarea>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#" style="color: var(--orange);">Terms and Conditions</a> <span class="required">*</span></label>
+                    </div>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Register for SaloneBazar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recently Registered Farmers Section -->
+    <div class="registered-section">
+        <h2 style="margin-bottom: 0.5rem;">Recently Joined Farmers</h2>
+        <p style="color: var(--gray); margin-bottom: 1rem;">Join 500+ farmers already selling on SaloneBazar</p>
+        <div id="registeredList" class="registered-list">
+            <!-- Registered users will appear here dynamically -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Container 1: Copyright Information -->
+        <div class="footer-section">
+            <h3>Copyright Information</h3>
+            <p>© 2026 SaloneBazar</p>
+            <p>All Rights Reserved</p>
+        </div>
+
+        <!-- Container 2: Privacy Policy -->
+        <div class="footer-section">
+            <h3>Privacy Policy</h3>
+            <ul class="footer-links">
+                <li><a href="#">Data Protection</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">User Information</a></li>
+                <li><a href="#">Data Collection</a></li>
+                <li><a href="#">Your Rights</a></li>
+            </ul>
+        </div>
+
+        <!-- Container 3: Contact Details -->
+        <div class="footer-section">
+            <h3>Contact Details</h3>
+            <p><strong>Address:</strong></p>
+            <p>44 Siaka Stevens Street</p>
+            <p>Freetown, Sierra Leone</p>
+            <p><strong>Email:</strong> salonebazar008.com</p>
+            <p><strong>Phone:</strong> +232 77 000 234</p>
+            <p><strong>Hours:</strong> Mon-Sat, 8AM-6PM</p>
+        </div>
+
+        <!-- Container 4: Terms and Conditions -->
+        <div class="footer-section">
+            <h3>Terms and Conditions</h3>
+            <ul class="footer-links">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Seller Agreement</a></li>
+                <li><a href="#">Buyer Terms</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Dispute Resolution</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>🌾 SaloneBazar - Connecting Farmers to Markets Since 2024</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">🇸🇱 Proudly Serving Sierra Leone's Agricultural Community</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
