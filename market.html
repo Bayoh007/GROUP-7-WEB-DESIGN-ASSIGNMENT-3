@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaloneBazar | Marketplace - Fresh Produce from Sierra Leone</title>
+    <link rel="stylesheet" href="CSS/market.css">
+    <script src="JAVASCRIPT/market.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container nav-container">
+        <div class="logo">Salone<span>Bazar</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="market.html" style="color: #E67E22;">Marketplace</a></li>
+            <!-- <li><a href="farmer.html">Farmers</a></li> -->
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Marketplace Header -->
+<section class="marketplace-header">
+    <div class="container">
+        <h1 style="color: white;">Fresh Produce Marketplace</h1>
+        <p>Direct from Sierra Leone's farmers — no middlemen, fair prices, quality guaranteed</p>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="filter-group">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="grains">Grains & Rice</button>
+            <button class="filter-btn" data-category="vegetables">Vegetables</button>
+            <button class="filter-btn" data-category="oils">Oils & Fats</button>
+            <button class="filter-btn" data-category="nuts">Nuts & Legumes</button>
+        </div>
+        <input type="text" class="search-box" placeholder="Search products..." id="searchInput">
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="product-grid"></div>
+
+    <!-- Price Calculator (JavaScript Interaction) -->
+    <div class="calculator-section">
+        <div class="calculator-box">
+            <h3>Market Price Estimator</h3>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem;">Calculate estimated market price in Sierra Leonean Leones (SLL)</p>
+            <select id="productSelect" class="calc-input">
+                <option value="rice">Local Rice (per kg)</option>
+                <option value="cassava">Cassava (per kg)</option>
+                <option value="palmOil">Palm Oil (per litre)</option>
+                <option value="groundnuts">Groundnuts (per kg)</option>
+                <option value="onions">Onions (per kg)</option>
+            </select>
+            <input type="number" id="quantity" class="calc-input" value="1" min="1" step="1">
+            <button id="calculateBtn" class="btn btn-small">Calculate Price</button>
+            <div id="calcResult" class="calc-result"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Container 1: Copyright Information -->
+        <div class="footer-section">
+            <h3>Copyright Information</h3>
+            <p>© 2026 SaloneBazar</p>
+            <p>All Rights Reserved</p>
+        </div>
+
+        <!-- Container 2: Privacy Policy -->
+        <div class="footer-section">
+            <h3>Privacy Policy</h3>
+            <ul class="footer-links">
+                <li><a href="#">Data Protection</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">User Information</a></li>
+                <li><a href="#">Data Collection</a></li>
+                <li><a href="#">Your Rights</a></li>
+            </ul>
+        </div>
+
+        <!-- Container 3: Contact Details -->
+        <div class="footer-section">
+            <h3>Contact Details</h3>
+            <p><strong>Address:</strong></p>
+            <p>44 Siaka Stevens Street</p>
+            <p>Freetown, Sierra Leone</p>
+            <p><strong>Email:</strong> salonebazar008.com</p>
+            <p><strong>Phone:</strong> +232 77 000 234</p>
+            <p><strong>Hours:</strong> Mon-Sat, 8AM-6PM</p>
+        </div>
+
+        <!-- Container 4: Terms and Conditions -->
+        <div class="footer-section">
+            <h3>Terms and Conditions</h3>
+            <ul class="footer-links">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Seller Agreement</a></li>
+                <li><a href="#">Buyer Terms</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Dispute Resolution</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>SaloneBazar - Connecting Farmers to Markets Since 2024</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">🇸🇱 Proudly Serving Sierra Leone's Agricultural Community</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

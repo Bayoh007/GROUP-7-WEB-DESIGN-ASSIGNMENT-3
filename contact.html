@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaloneBazar | Contact Us - Support for Farmers & Buyers</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+    <style src="JAVASCRIPT/contact.js"></style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container nav-container">
+        <div class="logo">Salone<span>Bazar</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="market.html">Marketplace</a></li>
+            <!-- <li><a href="register.html">Register</a></li> -->
+            <!-- <li><a href="farmer-dashboard.html">Farmer Dashboard</a></li> -->
+            <li><a href="contact.html" style="color: #E67E22;">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p>We're here to support Sierra Leone's farming community. Reach out anytime!</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2 class="info-title">Contact Information</h2>
+            
+            <div class="info-item">
+                <div class="info-icon"></div>
+                <div class="info-details">
+                    <h3>Head Office</h3>
+                    <p>44 Siaka Stevens Street, Freetown, Sierra Leone</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"></div>
+                <div class="info-details">
+                    <h3>Phone Support</h3>
+                    <p>+232 77 000 234 (Mon-Sat, 8AM-6PM)</p>
+                    <p>+232 76 123 456 (Emergency)</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"></div>
+                <div class="info-details">
+                    <h3>Email Addresses</h3>
+                    <p>support@salonebazar.gov.sl</p>
+                    <p>farmers@salonebazar.gov.sl</p>
+                    <p>partners@salonebazar.gov.sl</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"></div>
+                <div class="info-details">
+                    <h3>Social Media</h3>
+                    <p>Facebook: @SaloneBazar</p>
+                    <p>WhatsApp: +232 77 000 234</p>
+                </div>
+            </div>
+
+            <div class="office-hours">
+                <h3 style="color: var(--blue); margin-bottom: 0.5rem;">Office Hours</h3>
+                <div class="hours-item">
+                    <span>Monday - Friday</span>
+                    <span>8:00 AM - 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span>Saturday</span>
+                    <span>9:00 AM - 4:00 PM</span>
+                </div>
+                <div class="hours-item">
+                    <span>Sunday</span>
+                    <span>Closed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <h2 class="info-title">Send Us a Message</h2>
+            
+            <div id="formSuccess" class="success-message" style="display: none;"></div>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" id="contactName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address <span class="required">*</span></label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="contactPhone" placeholder="Optional">
+                </div>
+
+                <div class="form-group">
+                    <label>Subject <span class="required">*</span></label>
+                    <select id="contactSubject" required>
+                        <option value="">Select a subject</option>
+                        <option value="Farmer Support">Farmer Support</option>
+                        <option value="Market Inquiry">Market Inquiry</option>
+                        <option value="Technical Issue">Technical Issue</option>
+                        <option value="Partnership">Partnership Opportunity</option>
+                        <option value="Complaint">Complaint/Feedback</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Message <span class="required">*</span></label>
+                    <textarea id="contactMessage" rows="5" required placeholder="Please provide details about your inquiry..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="contactCopy" style="width: auto;">
+                        Send me a copy of this message
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <h2 class="info-title">Our Location</h2>
+        <div class="map-placeholder">
+            <div>
+                <div style="font-size: 3rem;"></div>
+                <h3>SaloneBazar Headquarters</h3>
+                <p>44 Siaka Stevens Street, Freetown</p>
+                <p style="margin-top: 0.5rem;">Coming soon: Interactive Map</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Team -->
+    <div class="team-section">
+        <h2 class="info-title">Our Support Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="image/our profile/isata.png" alt="">
+                </div>
+                <div class="team-name">Isata Bah</div>
+                <div class="team-role">Farmer Support Lead</div>
+                <div class="team-contact">isata@salonebazar.com</div>
+            </div>
+
+
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="image/our profile/esther.png" alt="">
+                </div>
+                <div class="team-name">Esther D'Mamie</div>
+                <div class="team-role">Technical Support</div>
+                <div class="team-contact">esther@salonebazar.com</div>
+            </div>
+
+
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="image/our profile/biggie.png" alt="Musa Bayoh">
+                </div>
+                <div class="team-name">Musa Bayoh</div>
+                <div class="team-role">Developer & Team lead</div>
+                <div class="team-contact">bayohmusa001@gmail.com</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <h2 class="info-title">❓ Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I register as a farmer on SaloneBazar?
+                <span>▼</span>
+            </div>
+            <div class="faq-answer">
+                Simply click on the "Register" tab in our navigation menu, fill out the registration form with your details, and submit. You'll receive a confirmation within 24 hours.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is there any fee to sell on SaloneBazar?
+                <span>▼</span>
+            </div>
+            <div class="faq-answer">
+                No! Registration and listing are completely FREE for Sierra Leone farmers. We're committed to supporting local agriculture.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I get paid for my products?
+                <span>▼</span>
+            </div>
+            <div class="faq-answer">
+                Payments can be made via mobile money (Orange Money, Afrimoney), bank transfer, or cash on delivery. We'll guide you through the process.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What areas do you serve?
+                <span>▼</span>
+            </div>
+            <div class="faq-answer">
+                We currently serve all major districts including Western Area, Bo, Kenema, Makeni, Kono, Kailahun, and Port Loko. We're expanding to more areas soon!
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I report a problem with my order?
+                <span>▼</span>
+            </div>
+            <div class="faq-answer">
+                Use our contact form above or call our support hotline at +232 77 000 234. Our team will assist you within 24 hours.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Container 1: Copyright Information -->
+        <div class="footer-section">
+            <h3>Copyright Information</h3>
+            <p>© 2026 SaloneBazar</p>
+            <p>All Rights Reserved</p>
+        </div>
+
+        <!-- Container 2: Privacy Policy -->
+        <div class="footer-section">
+            <h3>Privacy Policy</h3>
+            <ul class="footer-links">
+                <li><a href="#">Data Protection</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">User Information</a></li>
+                <li><a href="#">Data Collection</a></li>
+                <li><a href="#">Your Rights</a></li>
+            </ul>
+        </div>
+
+        <!-- Container 3: Contact Details -->
+        <div class="footer-section">
+            <h3>Contact Details</h3>
+            <p><strong>Address:</strong></p>
+            <p>44 Siaka Stevens Street</p>
+            <p>Freetown, Sierra Leone</p>
+            <p><strong>Email:</strong> salonebazar008.com</p>
+            <p><strong>Phone:</strong> +232 77 000 234</p>
+            <p><strong>Hours:</strong> Mon-Sat, 8AM-6PM</p>
+        </div>
+
+        <!-- Container 4: Terms and Conditions -->
+        <div class="footer-section">
+            <h3>Terms and Conditions</h3>
+            <ul class="footer-links">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Seller Agreement</a></li>
+                <li><a href="#">Buyer Terms</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Dispute Resolution</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <p>🌾 SaloneBazar - Connecting Farmers to Markets Since 2024</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">🇸🇱 Proudly Serving Sierra Leone's Agricultural Community</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
