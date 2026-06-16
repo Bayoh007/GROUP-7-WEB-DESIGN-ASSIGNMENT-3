@@ -1,0 +1,376 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+    color: #2c3e4e;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Color Theme */
+:root {
+    --orange: #E67E22;
+    --blue: #2C3E50;
+    --gray: #7F8C8D;
+    --light-gray: #ECF0F1;
+    --white: #ffffff;
+    --success-green: #27ae60;
+    --error-red: #e74c3c;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.2rem;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--blue);
+    border-left: 5px solid var(--orange);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    background: var(--blue);
+    padding: 1.7rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.4rem;
+
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+/* Form Container */
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.form-header {
+    background: linear-gradient(135deg, var(--blue) 0%, #1a252f 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.form-header h2 {
+    color: white;
+    border-left: none;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.form-header p {
+    color: var(--light-gray);
+    font-size: 0.95rem;
+}
+
+.form-body {
+    padding: 2rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: var(--orange);
+    margin-left: 3px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e4e8;
+    border-radius: 12px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    background: var(--white);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+input.error, select.error, textarea.error {
+    border-color: var(--error-red);
+}
+
+.error-message {
+    color: var(--error-red);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+/* Radio & Checkbox Groups */
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input {
+    width: auto;
+    margin: 0;
+}
+
+.radio-option label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: var(--orange);
+    color: white;
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background: #cf711f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+/* Success Message */
+.success-message {
+    background: #d5f4e6;
+    color: var(--success-green);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-left: 4px solid var(--success-green);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Info Box */
+.info-box {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--orange);
+}
+
+/* Registered Users Section */
+.registered-section {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.registered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.registered-item {
+    background: var(--light-gray);
+    padding: 0.8rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--orange);
+}
+
+/* Footer */
+/* Enhanced Footer Styles */
+footer {
+background: var(--blue);
+color: white;
+margin-top: 3rem;
+}
+
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem 24px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-section h3 {
+color: var(--orange);
+font-size: 1.1rem;
+margin-bottom: 1rem;
+border-left: 3px solid var(--orange);
+padding-left: 0.8rem;
+}
+
+.footer-section p {
+margin: 0.3rem 0;
+font-size: 0.85rem;
+line-height: 1.4;
+color: #cbd5e1;
+}
+
+.footer-links {
+list-style: none;
+padding: 0;
+}
+
+.footer-links li {
+margin: 0.5rem 0;
+}
+
+.footer-links a {
+color: #cbd5e1;
+text-decoration: none;
+font-size: 0.85rem;
+transition: color 0.3s;
+}
+
+.footer-links a:hover {
+color: var(--orange);
+text-decoration: underline;
+}
+
+.footer-bottom {
+background: rgba(0,0,0,0.2);
+padding: 1rem 0;
+text-align: center;
+}
+
+.footer-bottom p {
+font-size: 0.8rem;
+color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    .form-body {
+        padding: 1.5rem;
+    }
+    .radio-group {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
